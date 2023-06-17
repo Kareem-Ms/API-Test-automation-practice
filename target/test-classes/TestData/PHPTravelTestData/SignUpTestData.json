@@ -1,0 +1,20 @@
+{
+  "userInfo": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe",
+    "domain": "@example.com",
+    "password": "mypassword123",
+    "phone": "123456789",
+    "status": "yes",
+    "type": "customers",
+    "signup_token": "SABSEPOWERFULLANDSECURECODESIGNUPKAfYLIYE",
+    "phone_country_code": "94"
+  },
+  "messages": {
+    "SucessfullRegister": "account registered successfully.",
+    "EmailRegisteredBefore": "email already exist.",
+    "SucessStatus": "true",
+    "FailStatus": "false"
+  }
+}

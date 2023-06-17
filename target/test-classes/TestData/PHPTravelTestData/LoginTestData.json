@@ -1,0 +1,25 @@
+{
+  "userInfo": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe",
+    "domain": "@example.com",
+    "password": "mypassword123",
+    "phone": "123456789",
+    "status": "yes",
+    "type": "customers",
+    "signup_token": "SABSEPOWERFULLANDSECURECODESIGNUPKAfYLIYE",
+    "phone_country_code": "94",
+    "UnregisteredEmail": "Mmmsd@gmail.com",
+    "UnregisteredPassword": "tester123"
+  },
+  "messages": {
+    "SucessfullRegister": "account registered successfully.",
+    "AccountVerification": "Your account has been activated",
+    "LoginVerification": "user details",
+    "InvalidLogin": "no user found",
+    "status": "true",
+    "FailStatus": "False"
+  }
+
+}

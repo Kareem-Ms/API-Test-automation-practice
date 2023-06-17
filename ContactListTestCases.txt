@@ -1,0 +1,12 @@
+-Verify adding user with a non-registered email
+1-Add user using "Add user" api with a non-registered email
+2-Verify that the status code is 201
+3-Verify that user's email that was returned in response equal to entered user's email
+4-Verify that token field appears in the response
+
+-Verify adding user with a registered email
+1-do the same steps for adding user with non-registered email
+2-Add user using "Add user" api with the above registered email
+3-Verify that the returned status code is 400
+4-Verify that the returned message in response is equal to "Email address is already in use"
+

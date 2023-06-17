@@ -1,0 +1,13 @@
+{
+  "UserInfo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe",
+    "domain": "@example.com",
+    "password": "password123"
+  },
+  "messages": {
+    "EmailTaken": "Email address is already in use"
+  }
+
+}
