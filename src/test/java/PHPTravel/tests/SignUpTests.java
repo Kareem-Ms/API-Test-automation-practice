@@ -5,9 +5,7 @@ import Utiles.JsonFileManager;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
-
 import static org.hamcrest.Matchers.equalTo;
 
 public class SignUpTests {

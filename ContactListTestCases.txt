@@ -10,3 +10,23 @@
 3-Verify that the returned status code is 400
 4-Verify that the returned message in response is equal to "Email address is already in use"
 
+-Verify getting user's profile by sending token
+1-do the same steps for adding user with a non-registered email
+2-get user's profile by sending his token at headers for the get user profile api
+3-verify that the returned email in the response is equal to the registered email
+4-verify that the response has a key of _id
+
+-Verify getting user's profile by not sending token
+1-do the same steps for adding user with a non-registered email
+2-get user's profile by sending a request to get user profile api but don't send any token in the header
+3-verify that "Please authenticate." message appears at response
+
+-Verify updating the details of a registered user
+1-do the same steps for adding user with a non-registered email
+2-update user details using update user api and provide the registered user's token in the header of th request
+3-verify that the returned user_id in the response equal to the registered user_id
+
+-Verify updating the details of a non-registered user
+1-do the same steps for adding user with a non-registered email
+2-update user details using update user api and don't provide the registered user's token in the header of the request
+3-verify that "Please authenticate." message appears at response

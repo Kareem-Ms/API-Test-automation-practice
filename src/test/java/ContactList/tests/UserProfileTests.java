@@ -40,9 +40,8 @@ public class UserProfileTests {
     public void verifyGettingUserProfile(){
         Response response = getUserProfileApi.getUserProfile(token,200);
 
-        response.then().assertThat()
-                .body("email",equalTo(email))
-                .body("",hasKey("_id"));
+        response.then().assertThat().body("email",equalTo(email))
+                                    .body("",hasKey("_id"));
     }
 
     @Test
