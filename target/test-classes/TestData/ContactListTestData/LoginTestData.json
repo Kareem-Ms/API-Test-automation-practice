@@ -1,0 +1,10 @@
+{
+  "UserInfo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe",
+    "domain": "@example.com",
+    "password": "password123",
+    "UnregisteredEmail": "moet11220@gmail.com"
+  }
+}
