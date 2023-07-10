@@ -1,9 +1,11 @@
 package ContactList.tests;
 
+import ContactList.PojoClasses.User;
 import ContactList.apis.AddUserApi;
 import ContactList.apis.GetUserProfileApi;
 import Utiles.JsonFileManager;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
@@ -18,27 +20,28 @@ public class UserProfileTests {
     GetUserProfileApi getUserProfileApi;
     JsonFileManager testData;
     String email;
-    String token;
+    String password;
+    User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
     ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
     @Test
     public void verifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
-        Response response = addUserApi.AddUser(email,testData.getTestData("UserInfo.firstName")
+        password = testData.getTestData("UserInfo.password");
+
+        user = addUserApi.AddUser(email,testData.getTestData("UserInfo.firstName")
                 ,testData.getTestData("UserInfo.lastName")
-                ,testData.getTestData("UserInfo.password"),201);
+                ,password,201).as(User.class);
 
-        response.then().assertThat()
-                .body("user.email",equalTo(email))
-                .body("",hasKey("token"));
+        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertNotNull(user.getToken());
 
-        token = response.path("token");
     }
 
     @Test(dependsOnMethods = "verifyAddingUserWithUnregisteredEmail")
     public void verifyGettingUserProfile(){
-        Response response = getUserProfileApi.getUserProfile(token,200);
+        Response response = getUserProfileApi.getUserProfile(user.getToken(),200);
 
         response.then().assertThat().body("email",equalTo(email))
                                     .body("",hasKey("_id"));

@@ -1,9 +1,11 @@
 package ContactList.tests;
 
+import ContactList.PojoClasses.User;
 import ContactList.apis.AddUserApi;
 import ContactList.apis.UpdateUserApi;
 import Utiles.JsonFileManager;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasKey;
+
 
 public class UpdateUserTests{
 
@@ -20,32 +22,32 @@ public class UpdateUserTests{
     UpdateUserApi updateUserApi;
     JsonFileManager testData;
     String email;
-    String token;
-    String userID;
+    String password;
+    User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
     ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
     @Test
     public void verifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("RegisteringUserInfo.email")+"_"+currentTime+testData.getTestData("RegisteringUserInfo.domain");
-        Response response = addUserApi.AddUser(email,testData.getTestData("RegisteringUserInfo.firstName")
-                                              ,testData.getTestData("RegisteringUserInfo.lastName")
-                                              ,testData.getTestData("RegisteringUserInfo.password"),201);
+        password = testData.getTestData("RegisteringUserInfo.password");
 
-        response.then().assertThat().body("user.email",equalTo(email))
-                                    .body("",hasKey("token"));
+        user = addUserApi.AddUser(email,testData.getTestData("RegisteringUserInfo.firstName")
+                ,testData.getTestData("RegisteringUserInfo.lastName")
+                ,password,201).as(User.class);
 
-        token = response.path("token");
-        userID = response.path("_id");
+        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertNotNull(user.getToken());
+
     }
 
     @Test(dependsOnMethods = "verifyAddingUserWithUnregisteredEmail")
     public void verifyUpdatingRegisteredUser(){
-        Response response = updateUserApi.updateUser(token,email,testData.getTestData("UpdatedUserInfo.firstName")
+        Response response = updateUserApi.updateUser(user.getToken(),email,testData.getTestData("UpdatedUserInfo.firstName")
                                                           ,testData.getTestData("UpdatedUserInfo.lastName")
                                                           ,testData.getTestData("UpdatedUserInfo.password"),200);
 
-        response.then().assertThat().body("user._id",equalTo(userID));
+        response.then().assertThat().body("_id",equalTo(user.getUser().get_id()));
 
     }
     @Test

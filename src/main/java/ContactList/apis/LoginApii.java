@@ -6,11 +6,11 @@ import io.restassured.response.Response;
 
 import java.util.HashMap;
 
-public class LoginApi {
+public class LoginApii {
     ApiActions actions;
     String Url = "https://thinking-tester-contact-list.herokuapp.com/users/login";
 
-    public LoginApi(){
+    public LoginApii(){
         actions = new ApiActions(Url);
     }
 

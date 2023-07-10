@@ -1,10 +1,11 @@
 package ContactList.tests;
 
+import ContactList.PojoClasses.User;
 import ContactList.apis.AddUserApi;
 import Utiles.JsonFileManager;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -16,28 +17,30 @@ public class AddUserTests {
 
     ///////////////Variables\\\\\\\\\\\\\\\\\
     AddUserApi addUserApi;
+
     JsonFileManager testData;
     String email;
+    String password;
+    User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
     ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
     @Test
     public void VerifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
-        Response response = addUserApi.AddUser(email,testData.getTestData("UserInfo.firstName")
-                                                    ,testData.getTestData("UserInfo.lastName")
-                                                    ,testData.getTestData("UserInfo.password"),201);
+        password = testData.getTestData("UserInfo.password");
 
-        response.then().assertThat().body("user.email",equalTo(email))
-                                    .body("",hasKey("token"));
+        user = addUserApi.AddUser(email,testData.getTestData("UserInfo.firstName")
+                                                    ,testData.getTestData("UserInfo.lastName")
+                                                    ,password,201).as(User.class);
+
+        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertNotNull(user.getToken());
     }
 
     @Test(dependsOnMethods = "VerifyAddingUserWithUnregisteredEmail")
     public void VerifyAddingUserWithRegisteredEmail(){
-
-        Response response = addUserApi.AddUser(email,testData.getTestData("UserInfo.firstName")
-                                                    ,testData.getTestData("UserInfo.lastName")
-                                                    ,testData.getTestData("UserInfo.password"),400);
+        Response response = addUserApi.AddUser(email,user.getUser().getFirstName(), user.getUser().getLastName(),password ,400);
 
         response.then().assertThat().body("message",equalTo(testData.getTestData("messages.EmailTaken")));
     }
@@ -45,7 +48,7 @@ public class AddUserTests {
     ///////////////Configuration\\\\\\\\\\\\\\\
     @BeforeClass
     public void setUp(){
-        testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/LoginTestData.json");
+        testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/AddUserTestData.json");
         addUserApi = new AddUserApi();
     }
 
