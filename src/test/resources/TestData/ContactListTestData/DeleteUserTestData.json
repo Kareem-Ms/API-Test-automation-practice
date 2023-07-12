@@ -1,0 +1,9 @@
+{
+  "UserInfo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe",
+    "domain": "@example.com",
+    "password": "password123"
+  }
+}

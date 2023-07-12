@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-12T08:11:25 EET" name="Command line suite" finished-at="2023-07-12T08:12:15 EET" duration-ms="49545">
+    <groups>
+    </groups>
+    <test started-at="2023-07-12T08:11:25 EET" name="Command line test" finished-at="2023-07-12T08:12:15 EET" duration-ms="49545">
+      <class name="ContactList.tests.LoginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.LoginTests@64d2d351]" started-at="2023-07-12T08:11:32 EET" name="setUp" finished-at="2023-07-12T08:11:32 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.LoginTests@64d2d351]" started-at="2023-07-12T08:11:32 EET" name="VerifyAddingUserWithUnregisteredEmail" finished-at="2023-07-12T08:11:34 EET" duration-ms="1220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddingUserWithUnregisteredEmail -->
+        <test-method signature="VerifyLoginWithInCorrectEmailAndPw()[pri:0, instance:ContactList.tests.LoginTests@64d2d351]" started-at="2023-07-12T08:11:34 EET" name="VerifyLoginWithInCorrectEmailAndPw" finished-at="2023-07-12T08:11:35 EET" duration-ms="833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginWithInCorrectEmailAndPw -->
+        <test-method signature="VerifyLoginWithCorrectEmailAndPw()[pri:0, instance:ContactList.tests.LoginTests@64d2d351]" started-at="2023-07-12T08:11:35 EET" name="VerifyLoginWithCorrectEmailAndPw" finished-at="2023-07-12T08:11:35 EET" depends-on-methods="ContactList.tests.LoginTests.VerifyAddingUserWithUnregisteredEmail" duration-ms="793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginWithCorrectEmailAndPw -->
+      </class> <!-- ContactList.tests.LoginTests -->
+      <class name="ContactList.tests.AddUserTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.AddUserTests@1dd92fe2]" started-at="2023-07-12T08:11:25 EET" name="setUp" finished-at="2023-07-12T08:11:25 EET" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.AddUserTests@1dd92fe2]" started-at="2023-07-12T08:11:25 EET" name="VerifyAddingUserWithUnregisteredEmail" finished-at="2023-07-12T08:11:29 EET" duration-ms="3652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddingUserWithUnregisteredEmail -->
+        <test-method signature="VerifyAddingUserWithRegisteredEmail()[pri:0, instance:ContactList.tests.AddUserTests@1dd92fe2]" started-at="2023-07-12T08:11:29 EET" name="VerifyAddingUserWithRegisteredEmail" finished-at="2023-07-12T08:11:30 EET" depends-on-methods="ContactList.tests.AddUserTests.VerifyAddingUserWithUnregisteredEmail" duration-ms="929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddingUserWithRegisteredEmail -->
+      </class> <!-- ContactList.tests.AddUserTests -->
+      <class name="ContactList.tests.DeleteUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.DeleteUserTest@6b53e23f]" started-at="2023-07-12T08:11:30 EET" name="setUp" finished-at="2023-07-12T08:11:30 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.DeleteUserTest@6b53e23f]" started-at="2023-07-12T08:11:30 EET" name="VerifyAddingUserWithUnregisteredEmail" finished-at="2023-07-12T08:11:31 EET" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddingUserWithUnregisteredEmail -->
+        <test-method signature="VerifyDeletingUserSuccessfully()[pri:0, instance:ContactList.tests.DeleteUserTest@6b53e23f]" started-at="2023-07-12T08:11:31 EET" name="VerifyDeletingUserSuccessfully" finished-at="2023-07-12T08:11:32 EET" depends-on-methods="ContactList.tests.DeleteUserTest.VerifyAddingUserWithUnregisteredEmail" duration-ms="1867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDeletingUserSuccessfully -->
+      </class> <!-- ContactList.tests.DeleteUserTest -->
+      <class name="ContactList.tests.UserProfileTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.UserProfileTests@4f9a3314]" started-at="2023-07-12T08:11:39 EET" name="setUp" finished-at="2023-07-12T08:11:39 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.UserProfileTests@4f9a3314]" started-at="2023-07-12T08:11:39 EET" name="verifyAddingUserWithUnregisteredEmail" finished-at="2023-07-12T08:11:39 EET" duration-ms="835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddingUserWithUnregisteredEmail -->
+        <test-method signature="verifyGettingUserProfileWithoutToken()[pri:0, instance:ContactList.tests.UserProfileTests@4f9a3314]" started-at="2023-07-12T08:11:39 EET" name="verifyGettingUserProfileWithoutToken" finished-at="2023-07-12T08:11:40 EET" duration-ms="837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGettingUserProfileWithoutToken -->
+        <test-method signature="verifyGettingUserProfile()[pri:0, instance:ContactList.tests.UserProfileTests@4f9a3314]" started-at="2023-07-12T08:11:40 EET" name="verifyGettingUserProfile" finished-at="2023-07-12T08:11:41 EET" depends-on-methods="ContactList.tests.UserProfileTests.verifyAddingUserWithUnregisteredEmail" duration-ms="752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGettingUserProfile -->
+      </class> <!-- ContactList.tests.UserProfileTests -->
+      <class name="PHPTravel.tests.LoginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:11:41 EET" name="setUp" finished-at="2023-07-12T08:11:51 EET" duration-ms="10090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginWithInvalidCredintials()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:11:51 EET" name="LoginWithInvalidCredintials" finished-at="2023-07-12T08:11:52 EET" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithInvalidCredintials -->
+        <test-method signature="VerifyRegisteringUserWithValidData()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:11:52 EET" name="VerifyRegisteringUserWithValidData" finished-at="2023-07-12T08:11:58 EET" duration-ms="6248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyRegisteringUserWithValidData -->
+        <test-method signature="VerifyAccountSuccessfully()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:11:58 EET" name="VerifyAccountSuccessfully" finished-at="2023-07-12T08:12:08 EET" depends-on-methods="PHPTravel.tests.LoginTests.VerifyRegisteringUserWithValidData" duration-ms="9932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAccountSuccessfully -->
+        <test-method signature="LoginWithValidCredintials()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:12:08 EET" name="LoginWithValidCredintials" finished-at="2023-07-12T08:12:14 EET" depends-on-methods="PHPTravel.tests.LoginTests.VerifyAccountSuccessfully" duration-ms="6325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidCredintials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PHPTravel.tests.LoginTests@3b2c72c2]" started-at="2023-07-12T08:12:14 EET" name="tearDown" finished-at="2023-07-12T08:12:15 EET" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PHPTravel.tests.LoginTests -->
+      <class name="ContactList.tests.UpdateUserTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.UpdateUserTests@1b68b9a4]" started-at="2023-07-12T08:11:35 EET" name="setUp" finished-at="2023-07-12T08:11:35 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.UpdateUserTests@1b68b9a4]" started-at="2023-07-12T08:11:35 EET" name="verifyAddingUserWithUnregisteredEmail" finished-at="2023-07-12T08:11:37 EET" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddingUserWithUnregisteredEmail -->
+        <test-method signature="verifyUpdatingUnRegisteredUser()[pri:0, instance:ContactList.tests.UpdateUserTests@1b68b9a4]" started-at="2023-07-12T08:11:37 EET" name="verifyUpdatingUnRegisteredUser" finished-at="2023-07-12T08:11:37 EET" duration-ms="792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdatingUnRegisteredUser -->
+        <test-method signature="verifyUpdatingRegisteredUser()[pri:0, instance:ContactList.tests.UpdateUserTests@1b68b9a4]" started-at="2023-07-12T08:11:37 EET" name="verifyUpdatingRegisteredUser" finished-at="2023-07-12T08:11:39 EET" depends-on-methods="ContactList.tests.UpdateUserTests.verifyAddingUserWithUnregisteredEmail" duration-ms="1241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdatingRegisteredUser -->
+      </class> <!-- ContactList.tests.UpdateUserTests -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
