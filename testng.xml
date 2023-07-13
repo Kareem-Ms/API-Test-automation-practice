@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="ContactList tests">
+    <classes>
+            <class name="ContactList.tests.AddUserTests">
+                <methods>
+                    <include name="VerifyAddingUserWithUnregisteredEmail"/>
+                    <include name="VerifyAddingUserWithRegisteredEmail"/>
+                </methods>
+            </class>
+            <class name="ContactList.tests.DeleteUserTest">
+                <methods>
+                    <include name="VerifyAddingUserWithUnregisteredEmail"/>
+                    <include name="VerifyDeletingUserSuccessfully"/>
+                </methods>
+            </class>
+            <class name="ContactList.tests.LoginTests">
+                <methods>
+                    <include name="VerifyAddingUserWithUnregisteredEmail"/>
+                    <include name="VerifyLoginWithCorrectEmailAndPw"/>
+                    <include name="VerifyLoginWithInCorrectEmailAndPw"/>
+                </methods>
+            </class>
+            <class name="ContactList.tests.UpdateUserTests">
+                <methods>
+                    <include name="verifyAddingUserWithUnregisteredEmail"/>
+                    <include name="verifyUpdatingRegisteredUser"/>
+                    <include name="verifyUpdatingUnRegisteredUser"/>
+                </methods>
+            </class>
+            <class name="ContactList.tests.UserProfileTests">
+                <methods>
+                    <include name="verifyAddingUserWithUnregisteredEmail"/>
+                    <include name="verifyGettingUserProfile"/>
+                    <include name="verifyGettingUserProfileWithoutToken"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Php travel test cases">
+        <classes>
+            <class name="PHPTravel.tests.LoginTests">
+                <methods>
+                    <include name="VerifyRegisteringUserWithValidData"/>
+                    <include name="VerifyAccountSuccessfully"/>
+                    <include name="LoginWithValidCredintials"/>
+                    <include name="LoginWithInvalidCredintials"/>
+                </methods>
+            </class>
+            <class name="PHPTravel.tests.SignUpTests">
+                <methods>
+                    <include name="VerifyRegisteringUserWithUnregisteredEmail"/>
+                    <include name="VerifyRegisteringUserWithRegisteredEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -6,6 +6,8 @@ import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import static org.hamcrest.Matchers.equalTo;
 
 public class SignUpTests {
@@ -15,7 +17,7 @@ public class SignUpTests {
     RegisterApi registerApi;
     String email;
     String password;
-    String currentTime = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+    String currentTime ;
 
     ///////////////Tests\\\\\\\\\\\\\\\\\\\\
     @Test
@@ -58,5 +60,6 @@ public class SignUpTests {
     public void setUp(){
         registerApi = new RegisterApi();
         testData = new JsonFileManager("src/test/resources/TestData/PHPTravelTestData/SignUpTestData.json");
+        currentTime = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(Calendar.getInstance().getTime());
     }
 }

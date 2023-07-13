@@ -14,6 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import static org.hamcrest.Matchers.equalTo;
 
@@ -29,7 +30,7 @@ public class LoginTests {
     String password;
     String UserId;
     String EmailCode;
-    String currentTime = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+    String currentTime ;
 
     ///////////////Tests\\\\\\\\\\\\\\\\\
     @Test
@@ -88,6 +89,7 @@ public class LoginTests {
         loginApi = new LoginApi();
         registerApi = new RegisterApi();
         testData = new JsonFileManager("src/test/resources/TestData/PHPTravelTestData/LoginTestData.json");
+        currentTime = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(Calendar.getInstance().getTime());
     }
 
     @AfterClass
