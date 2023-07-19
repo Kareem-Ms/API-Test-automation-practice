@@ -22,11 +22,4 @@ public class LoginApi {
         return actions.performRequest("POST",200, ContentType.MULTIPART,null,null,reqBody,null);
     }
 
-    /*
-    *   Properties props = new Properties();
-        FileInputStream fis = new FileInputStream("src/main/resources/phptravels.properties");
-        props.load(fis);
-        String baseUrii = props.getProperty("baseurl");
-    *
-    * */
 }

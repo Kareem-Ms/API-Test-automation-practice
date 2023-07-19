@@ -3,6 +3,7 @@ package ContactList.tests;
 import ContactList.PojoClasses.User;
 import ContactList.apis.AddUserApi;
 import Utiles.JsonFileManager;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -13,19 +14,21 @@ import java.util.Date;
 
 import static org.hamcrest.Matchers.*;
 
+@Feature("Register user tests")
 public class AddUserTests {
 
-    ///////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     AddUserApi addUserApi;
-
     JsonFileManager testData;
     String email;
     String password;
     User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
-    @Test
+    // Tests Section
+    @Test(description = "Register tests - valid registration")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("registering a user using an email that hasn't been registered before")
     public void VerifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
         password = testData.getTestData("UserInfo.password");
@@ -34,18 +37,18 @@ public class AddUserTests {
                                                     ,testData.getTestData("UserInfo.lastName")
                                                     ,password,201).as(User.class);
 
-        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertEquals(user.getUserInfo().getEmail(),email);
         Assert.assertNotNull(user.getToken());
     }
 
     @Test(dependsOnMethods = "VerifyAddingUserWithUnregisteredEmail")
     public void VerifyAddingUserWithRegisteredEmail(){
-        Response response = addUserApi.AddUser(email,user.getUser().getFirstName(), user.getUser().getLastName(),password ,400);
+        Response response = addUserApi.AddUser(email,user.getUserInfo().getFirstName(), user.getUserInfo().getLastName(),password ,400);
 
         response.then().assertThat().body("message",equalTo(testData.getTestData("messages.EmailTaken")));
     }
 
-    ///////////////Configuration\\\\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/AddUserTestData.json");

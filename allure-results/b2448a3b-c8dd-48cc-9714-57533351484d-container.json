@@ -1,0 +1,1 @@
+{"uuid":"b2448a3b-c8dd-48cc-9714-57533351484d","name":"ContactList.tests.AddUserTests","children":["83472f0c-1436-426f-b904-3eaed6381cba"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689753553562,"stop":1689753553686}],"afters":[],"start":1689753553526,"stop":1689753558508}

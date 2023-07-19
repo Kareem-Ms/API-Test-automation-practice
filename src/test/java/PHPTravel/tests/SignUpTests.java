@@ -12,14 +12,14 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class SignUpTests {
 
-    //////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     JsonFileManager testData;
     RegisterApi registerApi;
     String email;
     String password;
     String currentTime ;
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\\\\
+    // Tests Section
     @Test
     public void VerifyRegisteringUserWithUnregisteredEmail(){
         email = testData.getTestData("userInfo.email")+"_"+currentTime+testData.getTestData("userInfo.domain");
@@ -55,7 +55,7 @@ public class SignUpTests {
                 .body("status",equalTo(Boolean. parseBoolean(testData.getTestData("messages.FailStatus"))));
     }
 
-    ///////////////Configuration\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         registerApi = new RegisterApi();

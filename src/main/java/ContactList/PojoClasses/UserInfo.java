@@ -4,64 +4,47 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserInfo {
-    @JsonProperty
+    @JsonProperty("_id")
     private String _id;
-    @JsonProperty
+    @JsonProperty("firstName")
     private String firstName;
-    @JsonProperty
+    @JsonProperty("lastName")
     private String lastName;
-    @JsonProperty
+    @JsonProperty("email")
     private String email;
     @JsonProperty
     private String password;
 
-   /* public User(String _id, String firstName, String lastName, String email, String password, String token){
-        this._id = _id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.token = token;
-    }*/
-
-    public String get_id() {
-        return _id;
-    }
-
     public void set_id(String _id) {
         this._id = _id;
     }
-
-    public String getFirstName() {
-        return firstName;
+    public String get_id() {
+        return _id;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
-    public String getLastName() {
-        return lastName;
+    public String getFirstName() {
+        return firstName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public String getEmail() {
-        return email;
+    public String getLastName() {
+        return lastName;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-
+    public String getEmail() {
+        return email;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 }

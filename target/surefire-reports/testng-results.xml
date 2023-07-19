@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-13T08:27:52 EET" name="ContactList.tests.DeleteUserTest" finished-at="2023-07-13T08:28:00 EET" duration-ms="7222">
+  <suite started-at="2023-07-19T10:01:15 EET" name="ContactList.tests.DeleteUserTest" finished-at="2023-07-19T10:01:21 EET" duration-ms="5600">
     <groups>
     </groups>
-    <test started-at="2023-07-13T08:27:52 EET" name="Command line test" finished-at="2023-07-13T08:28:00 EET" duration-ms="7222">
+    <test started-at="2023-07-19T10:01:15 EET" name="Command line test" finished-at="2023-07-19T10:01:21 EET" duration-ms="5600">
       <class name="ContactList.tests.DeleteUserTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.DeleteUserTest@7ff2a664]" started-at="2023-07-13T08:27:52 EET" name="setUp" finished-at="2023-07-13T08:27:53 EET" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ContactList.tests.DeleteUserTest@306cf3ea]" started-at="2023-07-19T10:01:15 EET" name="setUp" finished-at="2023-07-19T10:01:15 EET" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="VerifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.DeleteUserTest@7ff2a664]" started-at="2023-07-13T08:27:53 EET" name="VerifyAddingUserWithUnregisteredEmail" finished-at="2023-07-13T08:27:58 EET" duration-ms="5348" status="PASS">
+        <test-method signature="VerifyAddingUserWithUnregisteredEmail()[pri:0, instance:ContactList.tests.DeleteUserTest@306cf3ea]" started-at="2023-07-19T10:01:15 EET" name="VerifyAddingUserWithUnregisteredEmail" finished-at="2023-07-19T10:01:19 EET" duration-ms="3753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyAddingUserWithUnregisteredEmail -->
-        <test-method signature="VerifyDeletingUserSuccessfully()[pri:0, instance:ContactList.tests.DeleteUserTest@7ff2a664]" started-at="2023-07-13T08:27:58 EET" name="VerifyDeletingUserSuccessfully" finished-at="2023-07-13T08:28:00 EET" depends-on-methods="ContactList.tests.DeleteUserTest.VerifyAddingUserWithUnregisteredEmail" duration-ms="1751" status="PASS">
+        <test-method signature="VerifyDeletingUserSuccessfully()[pri:0, instance:ContactList.tests.DeleteUserTest@306cf3ea]" started-at="2023-07-19T10:01:19 EET" name="VerifyDeletingUserSuccessfully" finished-at="2023-07-19T10:01:21 EET" depends-on-methods="ContactList.tests.DeleteUserTest.VerifyAddingUserWithUnregisteredEmail" duration-ms="1734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyDeletingUserSuccessfully -->

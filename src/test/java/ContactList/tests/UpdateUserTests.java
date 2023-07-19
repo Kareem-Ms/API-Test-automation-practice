@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UpdateUserTests{
 
-    ///////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     AddUserApi addUserApi;
     UpdateUserApi updateUserApi;
     JsonFileManager testData;
@@ -26,7 +26,7 @@ public class UpdateUserTests{
     User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
+    // Tests Section
     @Test
     public void verifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("RegisteringUserInfo.email")+"_"+currentTime+testData.getTestData("RegisteringUserInfo.domain");
@@ -36,7 +36,7 @@ public class UpdateUserTests{
                 ,testData.getTestData("RegisteringUserInfo.lastName")
                 ,password,201).as(User.class);
 
-        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertEquals(user.getUserInfo().getEmail(),email);
         Assert.assertNotNull(user.getToken());
 
     }
@@ -47,7 +47,7 @@ public class UpdateUserTests{
                                                           ,testData.getTestData("UpdatedUserInfo.lastName")
                                                           ,testData.getTestData("UpdatedUserInfo.password"),200);
 
-        response.then().assertThat().body("_id",equalTo(user.getUser().get_id()));
+        response.then().assertThat().body("_id",equalTo(user.getUserInfo().get_id()));
 
     }
     @Test
@@ -60,7 +60,7 @@ public class UpdateUserTests{
 
     }
 
-    ///////////////Configuration\\\\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/UpdateUserTestData.json");

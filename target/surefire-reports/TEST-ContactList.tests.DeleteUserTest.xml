@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="ContactList.tests.DeleteUserTest" time="7.102" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="ContactList.tests.DeleteUserTest" time="5.49" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="20.0.1+9-29"/>
@@ -29,7 +29,7 @@
     <property name="classworlds.conf" value="E:\Automation config\apache-maven-3.8.2\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="cp437"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\xampp\php;C:\Users\usama\composer.phar;C:\Users\usama\composer-setup;C:\WINDOWS\System32\OpenSSH\;C:\Users\usama\AppData\Local\Programs\Git\bin\;C:\Users\usama\AppData\Local\Programs\Git\cmd\;E:\Automation config\apache-maven-3.8.2\bin;C:\Users\usama\AppData\Local\Microsoft\WindowsApps;C:\Users\usama\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\usama\AppData\Local\Programs\Git\cmd;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\xampp\php;C:\Users\usama\composer.phar;C:\Users\usama\composer-setup;C:\WINDOWS\System32\OpenSSH\;C:\Users\usama\AppData\Local\Programs\Git\bin\;C:\Users\usama\AppData\Local\Programs\Git\cmd\;E:\Automation config\apache-maven-3.8.2\bin;C:\Program Files\allure-2.22.4\bin;C:\Users\usama\AppData\Local\Microsoft\WindowsApps;C:\Users\usama\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\usama\AppData\Local\Programs\Git\cmd;."/>
     <property name="maven.conf" value="E:\Automation config\apache-maven-3.8.2/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="64.0"/>
@@ -60,6 +60,6 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ContactList.tests.DeleteUserTest" name="VerifyAddingUserWithUnregisteredEmail" time="5.35"/>
-  <testcase classname="ContactList.tests.DeleteUserTest" name="VerifyDeletingUserSuccessfully" time="1.752"/>
+  <testcase classname="ContactList.tests.DeleteUserTest" name="VerifyAddingUserWithUnregisteredEmail" time="3.755"/>
+  <testcase classname="ContactList.tests.DeleteUserTest" name="VerifyDeletingUserSuccessfully" time="1.735"/>
 </testsuite>

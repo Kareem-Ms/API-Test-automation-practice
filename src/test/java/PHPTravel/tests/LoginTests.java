@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class LoginTests {
 
-    ///////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     WebDriver driver;
     JsonFileManager testData;
     LoginApi loginApi;
@@ -32,7 +32,7 @@ public class LoginTests {
     String EmailCode;
     String currentTime ;
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\
+    // Tests Section
     @Test
     public void VerifyRegisteringUserWithValidData(){
        email = testData.getTestData("userInfo.email")+"_"+currentTime+testData.getTestData("userInfo.domain");
@@ -78,7 +78,7 @@ public class LoginTests {
                 .body("status",equalTo(Boolean. parseBoolean(testData.getTestData("messages.FailStatus"))));
     }
 
-    ///////////////Configuration\\\\\\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();

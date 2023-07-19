@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class DeleteUserTest {
 
-    ///////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     AddUserApi addUserApi;
     DeleteUserApi deleteUserApi;
     LoginApii loginApi;
@@ -24,7 +24,7 @@ public class DeleteUserTest {
     User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
+    // Tests Section
     @Test
     public void VerifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
@@ -34,7 +34,7 @@ public class DeleteUserTest {
                 ,testData.getTestData("UserInfo.lastName")
                 ,password,201).as(User.class);
 
-        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertEquals(user.getUserInfo().getEmail(),email);
         Assert.assertNotNull(user.getToken());
     }
 
@@ -42,10 +42,10 @@ public class DeleteUserTest {
     public void VerifyDeletingUserSuccessfully(){
         deleteUserApi.deleteUser(user.getToken(),200);
 
-        loginApi.Login(user.getUser().getEmail(), password, 401);
+        loginApi.Login(user.getUserInfo().getEmail(), password, 401);
     }
 
-    ///////////////Configuration\\\\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/AddUserTestData.json");

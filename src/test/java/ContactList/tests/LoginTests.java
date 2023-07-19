@@ -4,6 +4,7 @@ import ContactList.PojoClasses.User;
 import ContactList.apis.AddUserApi;
 import ContactList.apis.LoginApii;
 import Utiles.JsonFileManager;
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,7 +14,7 @@ import java.util.Date;
 
 public class LoginTests {
 
-    ///////////////Variables\\\\\\\\\\\\\\\\\
+    // Variables Section
     AddUserApi addUserApi;
     LoginApii loginApi;
     JsonFileManager testData;
@@ -22,7 +23,8 @@ public class LoginTests {
     User user;
     String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
 
-    ///////////////Tests\\\\\\\\\\\\\\\\\\\\\\
+    
+    // Tests Section
     @Test
     public void VerifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
@@ -32,7 +34,7 @@ public class LoginTests {
                 ,testData.getTestData("UserInfo.lastName")
                 ,password,201).as(User.class);
 
-        Assert.assertEquals(user.getUser().getEmail(),email);
+        Assert.assertEquals(user.getUserInfo().getEmail(),email);
         Assert.assertNotNull(user.getToken());
     }
 
@@ -40,7 +42,7 @@ public class LoginTests {
     public void VerifyLoginWithCorrectEmailAndPw(){
        User LoggedInUser = loginApi.Login(email, password, 200).as(User.class);
 
-       Assert.assertEquals(LoggedInUser.getUser().getEmail(),email);
+       Assert.assertEquals(LoggedInUser.getUserInfo().getEmail(),email);
        Assert.assertNotNull(LoggedInUser.getToken());
 
     }
@@ -51,7 +53,7 @@ public class LoginTests {
     }
 
 
-    ///////////////Configuration\\\\\\\\\\\\\\\
+    // Configuration Section
     @BeforeClass
     public void setUp(){
         testData = new JsonFileManager("src/test/resources/TestData/ContactListTestData/LoginTestData.json");
