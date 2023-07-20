@@ -1,0 +1,15 @@
+{
+  "total" : 14,
+  "items" : [ {
+    "uid" : "aa1143074e0b938c688c31427352d9ce",
+    "name" : "Register user tests",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  } ]
+}

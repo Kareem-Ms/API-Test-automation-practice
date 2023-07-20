@@ -1,6 +1,7 @@
 package ContactList.apis;
 
 import Utiles.ApiActions;
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -14,6 +15,7 @@ public class LoginApii {
         actions = new ApiActions(Url);
     }
 
+    @Step("Login to user account using Email: {email}, Password: {password}")
     public Response Login(String email, String password, int expectedStatusCode){
         HashMap<String,String> reqBody = new HashMap<>();
         reqBody.put("email",email);

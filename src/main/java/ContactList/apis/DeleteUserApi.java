@@ -1,6 +1,7 @@
 package ContactList.apis;
 
 import Utiles.ApiActions;
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -14,6 +15,7 @@ public class DeleteUserApi {
         actions = new ApiActions(url);
     }
 
+    @Step("Delete user using user token: {token}")
     public Response deleteUser(String token , int expectedStatusCode){
         HashMap<String,String> header = new HashMap<>();
         header.put("Authorization","Bearer "+token);

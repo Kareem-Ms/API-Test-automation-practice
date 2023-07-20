@@ -1,6 +1,7 @@
 package ContactList.apis;
 
 import Utiles.ApiActions;
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -14,8 +15,8 @@ public class UpdateUserApi {
         actions = new ApiActions(Url);
     }
 
+    @Step("Update user with token: {token}, with data Email: {email}, FirstName: {firstName}, LastName: {lastName}, Password: {password}")
     public Response updateUser(String token , String email, String firstName, String lastName, String password, int expectedStatusCode){
-
         HashMap<String,String> headers = new HashMap<>();
         headers.put("Authorization","Bearer "+token);
 

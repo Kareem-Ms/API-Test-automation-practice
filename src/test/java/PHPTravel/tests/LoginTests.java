@@ -5,6 +5,7 @@ import PHPTravel.apis.LoginApi;
 import PHPTravel.apis.RegisterApi;
 import Utiles.JsonFileManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +19,8 @@ import java.util.Calendar;
 
 import static org.hamcrest.Matchers.equalTo;
 
+@Epic("PHPTravel tests")
+@Feature("Login tests")
 public class LoginTests {
 
     // Variables Section
@@ -33,7 +36,9 @@ public class LoginTests {
     String currentTime ;
 
     // Tests Section
-    @Test
+    @Test(description = "Valid registration with unregistered email and password")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Registering a user using an email that hasn't been registered before")
     public void VerifyRegisteringUserWithValidData(){
        email = testData.getTestData("userInfo.email")+"_"+currentTime+testData.getTestData("userInfo.domain");
        password = testData.getTestData("userInfo.password");
@@ -52,14 +57,18 @@ public class LoginTests {
        EmailCode = response.path("data[0].email_code");
     }
 
-    @Test(dependsOnMethods = "VerifyRegisteringUserWithValidData")
+    @Test(dependsOnMethods = "VerifyRegisteringUserWithValidData",description = "Verify account through accessing verification link")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify account through accessing the url of activation link")
     public void VerifyAccountSuccessfully(){
         accountVerificationPage.verifyAccount(UserId, EmailCode);
         Assert.assertEquals(accountVerificationPage.getAccountActivatedMsg(),testData.getTestData("messages.AccountVerification"));
 
     }
 
-    @Test(dependsOnMethods = "VerifyAccountSuccessfully")
+    @Test(dependsOnMethods = "VerifyAccountSuccessfully", description = "Valid login with correct email and password")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Login to user account using a registered email and password")
     public void LoginWithValidCredintials(){
        Response response =  loginApi.login(email,password);
 
@@ -69,7 +78,9 @@ public class LoginTests {
 
     }
 
-    @Test
+    @Test(description = "Invalid login with incorrect email and password")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Login to user account using a non registered email and password")
     public void LoginWithInvalidCredintials(){
         Response response =  loginApi.login(testData.getTestData("userInfo.UnregisteredEmail"),testData.getTestData("userInfo.UnregisteredPassword"));
 

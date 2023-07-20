@@ -1,6 +1,7 @@
 package PHPTravel.apis;
 
 import Utiles.ApiActions;
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -14,6 +15,7 @@ public class RegisterApi {
         actions = new ApiActions(RegisterApiUrl);
     }
 
+    @Step("Register user using Email: {email}, Password: {password}, FirstName: {firstName}, LastName: {lastName}, Phone: {phone}, Status: {status}, Type: {type}, SignUpToken: {signupToken}, Phone_country_code: {phone_country_code}")
     public Response RegisterUser(String email, String password, String firstName, String lastName, String phone, String status, String type, String signupToken, String phone_country_code){
         //Forming request body
         HashMap<String,String> reqBody = new HashMap<>();

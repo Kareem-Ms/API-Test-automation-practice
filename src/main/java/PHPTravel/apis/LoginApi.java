@@ -1,6 +1,7 @@
 package PHPTravel.apis;
 
 import Utiles.ApiActions;
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import java.util.HashMap;
@@ -13,6 +14,7 @@ public class LoginApi {
         actions = new ApiActions(baseUri);
     }
 
+    @Step("Login using Email: {email}, Password: {password}")
     public Response login(String email, String password){
         //forming request body
         HashMap<String, String> reqBody = new HashMap<>();

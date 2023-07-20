@@ -1,0 +1,81 @@
+{
+  "uid" : "afe9c6937fc394f3",
+  "name" : "VerifyAddingUserWithRegisteredEmail",
+  "fullName" : "ContactList.tests.AddUserTests.VerifyAddingUserWithRegisteredEmail",
+  "historyId" : "3333de8961265842b082fc22f91441d",
+  "time" : {
+    "start" : 1689800842454,
+    "stop" : 1689800843314,
+    "duration" : 860
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1689800836835,
+      "stop" : 1689800836851,
+      "duration" : 16
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "testClass",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "VerifyAddingUserWithRegisteredEmail"
+  }, {
+    "name" : "parentSuite",
+    "value" : "All Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ContactList tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V38MVE0"
+  }, {
+    "name" : "thread",
+    "value" : "16808@DESKTOP-V38MVE0.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "Register user tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "afe9c6937fc394f3.json",
+  "parameterValues" : [ ]
+}

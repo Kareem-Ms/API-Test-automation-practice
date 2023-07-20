@@ -1,0 +1,78 @@
+{
+  "uid" : "1996df893e5410d2",
+  "name" : "VerifyRegisteringUserWithUnregisteredEmail",
+  "fullName" : "PHPTravel.tests.SignUpTests.VerifyRegisteringUserWithUnregisteredEmail",
+  "historyId" : "752f3129c9ef15a510139e5e0f310320",
+  "time" : {
+    "start" : 1689800853319,
+    "stop" : 1689800859267,
+    "duration" : 5948
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1689800853287,
+      "stop" : 1689800853319,
+      "duration" : 32
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "PHPTravel.tests.SignUpTests"
+  }, {
+    "name" : "testClass",
+    "value" : "PHPTravel.tests.SignUpTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "VerifyRegisteringUserWithUnregisteredEmail"
+  }, {
+    "name" : "parentSuite",
+    "value" : "All Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "Php travel test cases"
+  }, {
+    "name" : "subSuite",
+    "value" : "PHPTravel.tests.SignUpTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V38MVE0"
+  }, {
+    "name" : "thread",
+    "value" : "16808@DESKTOP-V38MVE0.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1996df893e5410d2.json",
+  "parameterValues" : [ ]
+}

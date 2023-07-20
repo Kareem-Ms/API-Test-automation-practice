@@ -1,0 +1,86 @@
+{
+  "uid" : "48b2cdaf50907082",
+  "name" : "Register tests - valid registration",
+  "fullName" : "ContactList.tests.AddUserTests.VerifyAddingUserWithUnregisteredEmail",
+  "historyId" : "cffd9767ab69381725c06b8986e88215",
+  "time" : {
+    "start" : 1689800836960,
+    "stop" : 1689800842345,
+    "duration" : 5385
+  },
+  "description" : "registering a user using an email that hasn't been registered before",
+  "descriptionHtml" : "<p>registering a user using an email that hasn't been registered before</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1689800836835,
+      "stop" : 1689800836851,
+      "duration" : 16
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "testClass",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "VerifyAddingUserWithUnregisteredEmail"
+  }, {
+    "name" : "parentSuite",
+    "value" : "All Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ContactList tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "ContactList.tests.AddUserTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V38MVE0"
+  }, {
+    "name" : "thread",
+    "value" : "16808@DESKTOP-V38MVE0.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "Register user tests"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "48b2cdaf50907082.json",
+  "parameterValues" : [ ]
+}

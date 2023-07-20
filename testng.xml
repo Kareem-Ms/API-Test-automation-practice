@@ -42,14 +42,6 @@
 
     <test name="Php travel test cases">
         <classes>
-            <class name="PHPTravel.tests.LoginTests">
-                <methods>
-                    <include name="VerifyRegisteringUserWithValidData"/>
-                    <include name="VerifyAccountSuccessfully"/>
-                    <include name="LoginWithValidCredintials"/>
-                    <include name="LoginWithInvalidCredintials"/>
-                </methods>
-            </class>
             <class name="PHPTravel.tests.SignUpTests">
                 <methods>
                     <include name="VerifyRegisteringUserWithUnregisteredEmail"/>

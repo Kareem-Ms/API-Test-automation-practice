@@ -5,6 +5,7 @@ import ContactList.apis.AddUserApi;
 import ContactList.apis.DeleteUserApi;
 import ContactList.apis.LoginApii;
 import Utiles.JsonFileManager;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,6 +13,8 @@ import org.testng.annotations.Test;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Epic("ContactList tests")
+@Feature("Delete user test")
 public class DeleteUserTest {
 
     // Variables Section
@@ -22,10 +25,12 @@ public class DeleteUserTest {
     String email;
     String password;
     User user;
-    String currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
+    String currentTime;
 
     // Tests Section
-    @Test
+    @Test(description = "Valid registration with unregistered email and password")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Registering a user using an email that hasn't been registered before")
     public void VerifyAddingUserWithUnregisteredEmail(){
         email = testData.getTestData("UserInfo.email")+"_"+currentTime+testData.getTestData("UserInfo.domain");
         password = testData.getTestData("UserInfo.password");
@@ -38,7 +43,9 @@ public class DeleteUserTest {
         Assert.assertNotNull(user.getToken());
     }
 
-    @Test(dependsOnMethods = "VerifyAddingUserWithUnregisteredEmail")
+    @Test(dependsOnMethods = "VerifyAddingUserWithUnregisteredEmail",description = "Valid deleting registered user")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Deleting a registered user using the token assigned to him")
     public void VerifyDeletingUserSuccessfully(){
         deleteUserApi.deleteUser(user.getToken(),200);
 
@@ -52,5 +59,6 @@ public class DeleteUserTest {
         addUserApi = new AddUserApi();
         deleteUserApi = new DeleteUserApi();
         loginApi = new LoginApii();
+        currentTime = new SimpleDateFormat("ddMMyyyyHHmmssSSS").format(new Date());
     }
 }

@@ -1,0 +1,151 @@
+[ {
+  "uid" : "3ab0463b1cb1f943",
+  "name" : "verifyAddingUserWithUnregisteredEmail",
+  "time" : {
+    "start" : 1689800848459,
+    "stop" : 1689800849334,
+    "duration" : 875
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7298ee754dfaeafe",
+  "name" : "VerifyLoginWithInCorrectEmailAndPw",
+  "time" : {
+    "start" : 1689800847600,
+    "stop" : 1689800848366,
+    "duration" : 766
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "13c10d64ef8a79ec",
+  "name" : "verifyUpdatingRegisteredUser",
+  "time" : {
+    "start" : 1689800849334,
+    "stop" : 1689800850115,
+    "duration" : 781
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bdc7552d7888dc1c",
+  "name" : "verifyAddingUserWithUnregisteredEmail",
+  "time" : {
+    "start" : 1689800850944,
+    "stop" : 1689800851772,
+    "duration" : 828
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "71fa338b63e13587",
+  "name" : "verifyGettingUserProfile",
+  "time" : {
+    "start" : 1689800851772,
+    "stop" : 1689800852538,
+    "duration" : 766
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3049cd991dc0d81",
+  "name" : "VerifyAddingUserWithUnregisteredEmail",
+  "time" : {
+    "start" : 1689800846054,
+    "stop" : 1689800846881,
+    "duration" : 827
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a00e61cc259e98e",
+  "name" : "VerifyRegisteringUserWithRegisteredEmail",
+  "time" : {
+    "start" : 1689800859267,
+    "stop" : 1689800859876,
+    "duration" : 609
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "92d9e0a2e726ed40",
+  "name" : "verifyGettingUserProfileWithoutToken",
+  "time" : {
+    "start" : 1689800852538,
+    "stop" : 1689800853240,
+    "duration" : 702
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48b2cdaf50907082",
+  "name" : "Register tests - valid registration",
+  "time" : {
+    "start" : 1689800836960,
+    "stop" : 1689800842345,
+    "duration" : 5385
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1996df893e5410d2",
+  "name" : "VerifyRegisteringUserWithUnregisteredEmail",
+  "time" : {
+    "start" : 1689800853319,
+    "stop" : 1689800859267,
+    "duration" : 5948
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "661177fdca53b195",
+  "name" : "VerifyAddingUserWithUnregisteredEmail",
+  "time" : {
+    "start" : 1689800843330,
+    "stop" : 1689800844247,
+    "duration" : 917
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "afe9c6937fc394f3",
+  "name" : "VerifyAddingUserWithRegisteredEmail",
+  "time" : {
+    "start" : 1689800842454,
+    "stop" : 1689800843314,
+    "duration" : 860
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a20de54a98542c1",
+  "name" : "VerifyLoginWithCorrectEmailAndPw",
+  "time" : {
+    "start" : 1689800846881,
+    "stop" : 1689800847600,
+    "duration" : 719
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4756361941e0dd4f",
+  "name" : "VerifyDeletingUserSuccessfully",
+  "time" : {
+    "start" : 1689800844678,
+    "stop" : 1689800846054,
+    "duration" : 1376
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76c4e26892ce13d0",
+  "name" : "verifyUpdatingUnRegisteredUser",
+  "time" : {
+    "start" : 1689800850115,
+    "stop" : 1689800850850,
+    "duration" : 735
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
