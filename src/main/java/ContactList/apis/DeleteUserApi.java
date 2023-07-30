@@ -16,10 +16,10 @@ public class DeleteUserApi {
     }
 
     @Step("Delete user using user token: {token}")
-    public Response deleteUser(String token , int expectedStatusCode){
-        HashMap<String,String> header = new HashMap<>();
-        header.put("Authorization","Bearer "+token);
+    public Response deleteUser(String token, int expectedStatusCode) {
+        HashMap<String, String> header = new HashMap<>();
+        header.put("Authorization", "Bearer " + token);
 
-       return actions.performRequest("DELETE", expectedStatusCode, ContentType.JSON,header,null,null,null);
+        return actions.performRequest("DELETE", expectedStatusCode, ContentType.JSON, header, null, null, null);
     }
 }

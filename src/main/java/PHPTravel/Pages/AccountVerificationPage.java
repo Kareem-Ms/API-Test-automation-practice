@@ -13,22 +13,21 @@ public class AccountVerificationPage {
     //////////////variables\\\\\\\\\\\\\\\\\\\
     WebDriver driver;
     String VerificationUrl = "https://phptravels.net/account/activation/";
-
-    public AccountVerificationPage(WebDriver driver){
-        this.driver = driver;
-    }
-
     //////////////Locators\\\\\\\\\\\\\\\\\\\
     By AccountActivatedMsgLocator = By.xpath("//p//strong[contains(text(),'has been activated')]");
 
+    public AccountVerificationPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     //////////////variables\\\\\\\\\\\\\\\\\\\
 
-    public void verifyAccount(String UserId, String EmailCode){
-        String AccountVerificationUrl = VerificationUrl+UserId+"/"+EmailCode;
+    public void verifyAccount(String UserId, String EmailCode) {
+        String AccountVerificationUrl = VerificationUrl + UserId + "/" + EmailCode;
         driver.get(AccountVerificationUrl);
     }
 
-    public String getAccountActivatedMsg(){
+    public String getAccountActivatedMsg() {
         WebElement VerifiedMsg = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(AccountActivatedMsgLocator));
         return VerifiedMsg.getText();

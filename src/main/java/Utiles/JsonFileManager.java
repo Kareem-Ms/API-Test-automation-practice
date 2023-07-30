@@ -1,7 +1,10 @@
 package Utiles;
+
+import io.restassured.path.json.JsonPath;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import io.restassured.path.json.JsonPath;
+
 import static org.testng.Assert.fail;
 
 public class JsonFileManager {

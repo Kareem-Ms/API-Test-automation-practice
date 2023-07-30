@@ -11,14 +11,14 @@ public class RegisterApi {
     ApiActions actions;
     String RegisterApiUrl = "https://phptravels.net/api/signup";
 
-    public RegisterApi(){
+    public RegisterApi() {
         actions = new ApiActions(RegisterApiUrl);
     }
 
     @Step("Register user using Email: {email}, Password: {password}, FirstName: {firstName}, LastName: {lastName}, Phone: {phone}, Status: {status}, Type: {type}, SignUpToken: {signupToken}, Phone_country_code: {phone_country_code}")
-    public Response RegisterUser(String email, String password, String firstName, String lastName, String phone, String status, String type, String signupToken, String phone_country_code){
+    public Response RegisterUser(String email, String password, String firstName, String lastName, String phone, String status, String type, String signupToken, String phone_country_code) {
         //Forming request body
-        HashMap<String,String> reqBody = new HashMap<>();
+        HashMap<String, String> reqBody = new HashMap<>();
         reqBody.put("email", email);
         reqBody.put("password", password);
         reqBody.put("first_name", firstName);
@@ -27,9 +27,9 @@ public class RegisterApi {
         reqBody.put("status", status);
         reqBody.put("type", type);
         reqBody.put("signup_token", signupToken);
-        reqBody.put("phone_country_code",phone_country_code);
+        reqBody.put("phone_country_code", phone_country_code);
 
-        return actions.performRequest("POST",200, ContentType.MULTIPART,null,null,reqBody,null);
+        return actions.performRequest("POST", 200, ContentType.MULTIPART, null, null, reqBody, null);
     }
 
 }

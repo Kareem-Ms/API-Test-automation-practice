@@ -5,29 +5,26 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-import java.io.File;
 import java.util.HashMap;
-import java.util.Map;
 
 import static org.testng.Assert.fail;
 
 public class ApiActions {
 
-    //the overall idea that i want to form the request and put it in request specification object
-    //then we are gonna send that request wether it's get or post or whatever
+    //The overall idea that I want to form the request and put it in request specification object
+    //then we will send that request whether it's get or post or whatever
     //then we will return the response
 
-    private RequestSpecification request;
     private Response response;
-    private  String ApiUrl;
+    private final String ApiUrl;
 
     public ApiActions(String ApiUrl) {
         this.ApiUrl = ApiUrl;
     }
 
-    public Response performRequest(String RequestType, int expectedStatusCode, ContentType contentType, HashMap<String, String> headers, HashMap<String, String> queryParams,HashMap<String,String> FormParams ,HashMap<String,String> body) {
+    public Response performRequest(String RequestType, int expectedStatusCode, ContentType contentType, HashMap<String, String> headers, HashMap<String, String> queryParams, HashMap<String, String> FormParams, HashMap<String, String> body) {
 
-        request = RestAssured.given().log().all();
+        RequestSpecification request = RestAssured.given().log().all();
 
         try {
             //forming the request with the given parameters
@@ -41,8 +38,7 @@ public class ApiActions {
                 request.queryParams(queryParams);
             }
             if (FormParams != null) {
-                for (HashMap.Entry<String,String> entry : FormParams.entrySet())
-                {
+                for (HashMap.Entry<String, String> entry : FormParams.entrySet()) {
                     String key = entry.getKey();
                     String value = entry.getValue();
                     request.multiPart(key, value);
